@@ -1,0 +1,7 @@
+.layui-table-body .layui-table-cell{ height: 40px;line-height: 40px;}
+.layui-table-body{ overflow: inherit;}
+.layui-table-box{ overflow: visible;}
+.layui-table-header{ overflow: hidden;}
+.layui-table-mend{display: none;}
+.layui-form-item{ margin-bottom: 0;}
+.layui-form-pane .layui-form-label{ width: auto;}

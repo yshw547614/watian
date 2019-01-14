@@ -1,0 +1,4 @@
+.region-div{ width:210px;float: left; height: 400px; overflow-y: scroll; background-color: #fff;}
+.layui-border-box{}
+.layui-table-click{background-color: #009688; color: #fff;}
+.layui-table-hover,.layui-table tbody tr:hover{background-color: #009688; color: #fff;}

@@ -1,0 +1,8 @@
+.layui-table-body .layui-table td{ vertical-align: middle; display: table-cell;}
+.layui-table-cell, .layui-table-tool-panel li{ text-overflow: clip;white-space:normal;}
+.layui-elem-quote{ margin-bottom: 0; background-color:#fff; border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6;}
+.layui-form-pane .layui-form-label{ padding: 8px 5px; width: 100px;}
+.layui-form-item{ margin-bottom: 0;}
+.layui-table-view{border-bottom: 2px solid #e6e6e6;}
+.layui-elem-quote{ padding: 10px;}
+.confirm{ padding: 10px; box-sizing: border-box;}

@@ -1,0 +1,5 @@
+body{ padding: 0 20px 20px;}
+.layui-field-title{ margin:30px 0;}
+.layui-form{ border: 1px solid #eee; padding: 20px;}
+.layui-table td p{ line-height: 28px;}
+.layui-table td p a{text-decoration: underline; color: #1E9FFF;}

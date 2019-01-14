@@ -1,0 +1,40 @@
+html{
+    min-height: 100%;
+}
+body{
+    min-width: 320px;
+}
+.tp-area-list-wrap{
+    padding-top:10px;
+    padding-left:20px;
+    max-height:120px;
+    overflow: auto;
+    min-height: 20px;
+}
+.tp-area-list li{
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.tp-inline-block-wrap{
+    text-align: center;
+}
+.tp-inline-block-wrap>div{
+    display: inline-block;
+}
+.tp-layer-btns-wrap{
+    padding: 10px;
+    text-align: center;
+}
+.tp-layer-btns-wrap>a{
+    display: inline-block;
+    width: 96px;
+    line-height: 36px;
+    margin: 10px 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    background-color: #48cfae;
+    color: #fff;
+}
+select{ color: #777; background-color: #FFF; height: 30px; vertical-align: middle; *display: inline;padding: 0 4px; border: solid 1px #E6E9EE; *zoom:1; width: 158px; height: 230px;}
+select option{ line-height: 30px; display: block; height: 30px; padding: 4px; width: 130px;}

@@ -1,0 +1,8 @@
+.layui-tab-content{ padding: 0;}
+.layui-tab-title{ background-color: #fff; margin-bottom: 15px; border-left: 5px solid #009688;}
+.layui-border-box{background-color: #fff;}
+.layui-table-body .layui-table-cell{ height: 52px;line-height: 52px;}
+.shenghe{ color: #009688; text-decoration: underline;}
+.shenghe:hover{ color: #1E9FFF;}
+.layui-form-item{ margin-bottom: 0}
+.layui-form-label{ width:auto; padding: 10px;}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="__ADMIN__/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="__ADMIN__/css/public.css" media="all" />
+    <link rel="stylesheet" href="__ADMIN__/client/shop/freight/index.css" media="all" />
+</head>
+<body class="childrenBody">
+<blockquote class="layui-elem-quote white">
+    <a class="layui-btn layui-btn-sm addTemplate">添加运费模板</a>
+</blockquote>
+{volist name='list' id='item'}
+    <div class="freight_templet">
+    <table class="layui-table head-table" lay-skin="line">
+        <colgroup>
+            <col width="150">
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <td>
+                {$item.name}
+                {switch name="item.type"}
+                {case value='1'}重量{/case}
+                {case value='2'}体积{/case}
+                {default/}件数
+                {/switch}
+            </td>
+            <td style="text-align: right">
+                <a data-id="{$item.id}"><i class="layui-icon layui-icon-edit"></i></a>
+                <a data-id="{$item.id}"><i class="layui-icon layui-icon-delete"></i></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="layui-table">
+        <tr>
+            <th>配送区域</th>
+            <th>首{$item.unit_name}</th>
+            <th>运费(元)</th>
+            <th>续{$item.unit_name}</th>
+            <th>运费(元)</th>
+        </tr>
+        {volist name='item.config' id='config'}
+        <tr>
+            <td>
+                {volist name='config.region' id='region' empty='中国'}
+                    {if condition="$i eq count($config.region)"}
+                        {$region.name}
+                    {else/}
+                         {$region.name},
+                    {/if}
+                {/volist}
+            </td>
+            <td>{$config.first_unit}</td>
+            <td>{$config.first_money}</td>
+            <td>{$config.continue_unit}</td>
+            <td>{$config.continue_money}</td>
+        </tr>
+        {/volist}
+    </table>
+    </div>
+{/volist}
+<script type="text/javascript" src="__ADMIN__/layui/layui.js"></script>
+<script type="text/javascript" src="__ADMIN__/client/shop/freight/template.js"></script>
+</body>
+</html>

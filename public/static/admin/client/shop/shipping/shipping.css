@@ -1,0 +1,9 @@
+body{ padding-top: 50px;}
+.rule-div{ width: 600px;  margin-left: 110px; margin-top: 20px;}
+.rule-list-div{position: relative;border: 1px dashed #eee; margin-top: 15px; padding-top: 15px;}
+.layui-form-label{ text-align: left;}
+.reduce_rule{ position: absolute; right: -10px; top: -10px;  font-size: 20px; color: #FF5722;}
+.product_list{width: 1000px;  margin-left: 110px; margin-top: 20px; margin-bottom: 20px;}
+.layui-table-body .layui-table-cell{ height: 52px;line-height: 52px;}
+.layui-table-page{border-bottom: 1px solid #e6e6e6;}
+.select-product-btn{ display: none;}

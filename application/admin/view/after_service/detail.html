@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>后台管理系统</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="__ADMIN__/layui/css/layui.css" media="all" />
+    <link rel="stylesheet" href="__ADMIN__/css/public.css" media="all" />
+    <link rel="stylesheet" href="__ADMIN__/client/shop/after_service/detail.css" media="all" />
+</head>
+<body class="childrenBody">
+<input name="service_id" type="hidden" value="{$data.id}">
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>基本信息</legend>
+</fieldset>
+<table class="layui-table">
+    <colgroup>
+        <col width="150">
+        <col>
+    </colgroup>
+    <tbody>
+        <tr>
+            <td width="160">订单编号</td>
+            <td colspan="2">
+                <a href="{:url('order/detail',['id'=>$data.order_id])}">{$data.order_no}</a>
+            </td>
+        </tr>
+        <tr>
+            {if condition = "!empty($data.user.nickname) && !empty($data.user.head_img)"}
+            <td>申请用户</td>
+            <td colspan="2">
+                <img src="{$data.user.head_img}" width="50" style="float: left; margin-right: 10px;">
+                <p style="float:left; vertical-align: middle;">{$data.user.nickname}</p>
+            </td>
+            {else/}
+            <td>用户id号</td>
+            <td colspan="2">
+                {$data.user.id}
+            </td>
+            {/if}
+
+        </tr>
+        <tr>
+            <td width="160">售后进度</td>
+            {if condition = "$data.status == 0"}
+            <td width="80">{$data.refund}</td>
+            <td>
+                <button class="layui-btn layui-btn-sm" type="button" id="through"> 确认通过</button>
+            </td>
+            {else /}
+            <td colspan="2">{$data.refund}</td>
+            {/if}
+
+        </tr>
+
+        {if condition = "$data.status == 2"}
+        <tr>
+            <td>用户发货物流信息</td>
+            <td width="200">
+                <p><span style="margin-right: 10px;">物流公司 :</span>{$data.delivery.express_name}</p>
+                <p><span style="margin-right: 10px;">快递单号 :</span>
+                    <a href="https://m.kuaidi100.com/index_all.html?type={$data.delivery.express_code}&postid={$data.delivery.odd_number}" target="_blank">{$data.delivery.odd_number}</a>
+                </p>
+            </td>
+            <td>
+                <button class="layui-btn layui-btn-sm" type="button" id="confirm"> 确认收货</button>
+            </td>
+        </tr>
+        {/if}
+        {if condition = "$data.status > 2"}
+        <tr>
+            <td>用户发货物流信息</td>
+            <td colspan="2">
+                <p><span style="margin-right: 10px;">物流公司 :</span>{$data.delivery.express_name}</p>
+                <p><span style="margin-right: 10px;">快递单号 :</span>
+                    <a href="https://m.kuaidi100.com/index_all.html?type={$data.delivery.express_code}&postid={$data.delivery.odd_number}" target="_blank">{$data.delivery.odd_number}</a>
+                </p>
+            </td>
+        </tr>
+        {/if}
+        <tr>
+            <td>退款金额</td>
+            {if condition = "$data.status == 3"}
+            <td width="100">{$data.refund_money}元</td>
+            <td>
+                <button class="layui-btn layui-btn-sm" type="button" id="return"> 确认退款</button>
+                <span style="color: #CC0000"> （ 支付原路返回 ）</span>
+            </td>
+            {else /}
+            <td colspan="2">{$data.refund_money}元</td>
+            {/if}
+
+        </tr>
+        {if condition='isset($data.logistic)'}
+        <tr>
+            <td>退款时间</td>
+            <td colspan="2">{$data.refund_money}</td>
+        </tr>
+        {/if}
+        <tr>
+            <td>申请时间</td>
+            <td colspan="2">{$data.create_time}</td>
+        </tr>
+    </tbody>
+</table>
+<fieldset class="layui-elem-field layui-field-title">
+    <legend>售后商品列表</legend>
+</fieldset>
+<table class="layui-table product">
+    <thead>
+        <tr>
+            <th>商品编号</th>
+            <th>商品名称</th>
+            <th>商品单价</th>
+            <th>购买数量</th>
+            <th>商品总价</th>
+            <th>退款原因</th>
+            <th>退款说明</th>
+            <th>图片凭证</th>
+        </tr>
+    </thead>
+    <tbody>
+        {volist name="data.after_service_product" id="item"}
+        <tr>
+            <td>
+                <a href="{:url('product/edit',['id'=>$item.order_product.product_id])}">
+                    {$item.order_product.product_sn}
+                </a>
+            </td>
+            <td>{$item.order_product.name}</td>
+            <td>{$item.order_product.price}</td>
+            <td>{$item.amount}</td>
+            <td>{$item.order_product.total_price}</td>
+            <td>{$item.reason}</td>
+            <td>
+                {empty name="item.describe"}
+                无
+                {else /}
+                {$item.describe}
+                {/empty}
+            </td>
+            <td>
+                {empty name="item.images"}
+                无
+                {else /}
+                {volist name = "item.images" id = "image"}
+                <img src="{$image}" width="50" height="50" class="bigPic">
+                {/volist}
+                {/empty}
+            </td>
+        </tr>
+        {/volist}
+    </tbody>
+</table>
+<script type="text/javascript" src="__ADMIN__/layui/layui.js"></script>
+<script type="text/javascript" src="__ADMIN__/client/shop/after_service/detail.js"></script>
+</body>
+</html>
