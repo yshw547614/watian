@@ -263,7 +263,6 @@ layui.config({
                 {title: '操作', width:120, templet:'#listBar',fixed:"right",align:"center"}
             ]],
             done:function (res) {
-                console.log(res)
                 layer.close(index)
             }
         })

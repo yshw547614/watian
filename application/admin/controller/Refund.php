@@ -12,7 +12,7 @@ namespace app\admin\controller;
 use app\admin\model\Order;
 use app\admin\validate\BaseValidate;
 use app\common\enum\OrderStatusEnum;
-use app\admin\service\Refund as RefundService;
+use app\common\service\Refund as RefundService;
 
 class Refund extends BaseController
 {

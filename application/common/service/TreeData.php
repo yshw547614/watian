@@ -44,7 +44,7 @@ final class TreeData
             $str = "";
             if ($v['level'] > 2) {
                 for ($i = 1; $i < $v['level'] - 1; $i++) {
-                    $str .= "&emsp;│";
+                    $str .= "&emsp;├";
                 }
             }
             if ($v['level'] != 1) {
@@ -60,7 +60,7 @@ final class TreeData
         return $data;
     }
 
-    public function channelList($data,$pid=0,$fieldPid='pid',$level=1,$maxLevel=2){
+    public function channelList($data,$pid=0,$fieldPid='pid',$level=1,$maxLevel=4){
         $arr=array();
         foreach ($data as $k => $v) {
             if($v[$fieldPid]==$pid){

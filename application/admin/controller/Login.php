@@ -34,8 +34,7 @@ class Login extends BaseController
     }
     public function logout(){
         session(null);
-        $result = RequestResponse::getResponse();
-        return json($result);
+        return RequestResponse::getResponse();
     }
     public function verify(){
         $config = [

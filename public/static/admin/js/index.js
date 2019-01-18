@@ -20,7 +20,7 @@ layui.use(['bodyTab','form','element','layer','jquery'],function(){
     $('.topLevelMenus').find('li').click(function(){
         var _modules = $(this).attr('data-menu');
         $('div[id^="admincpNavTabs_"]').hide();
-        $('#admincpNavTabs_' + _modules).show().find('dl').removeClass('active').first().addClass('active').find('dd').show().find('li a').first().click();
+        $('#admincpNavTabs_' + _modules).show().find('dl').removeClass('active').first().addClass('active').find('dd').hide().first().show().find('li a').first().click();
     });
 	
 	// 侧边导航二级菜单切换（展开式）
@@ -52,7 +52,7 @@ layui.use(['bodyTab','form','element','layer','jquery'],function(){
 		$(".layui-layout-admin").toggleClass("showMenu");
 		//渲染顶部窗口
 		tab.tabMove();
-	})
+	});
 
 
 
@@ -91,7 +91,7 @@ layui.use(['bodyTab','form','element','layer','jquery'],function(){
                 location.href = '/admin/login/login.html';
             }
         })
-    })
+    });
 
 	//刷新后还原打开的窗口
     if(cacheStr == "true") {

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpWeb\watian\webserver\public/../application/admin\view\index\index.html";i:1546051421;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpWeb\watian\webserver\public/../application/admin\view\index\index.html";i:1547781189;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,8 +36,8 @@
                 <li class="layui-nav-item lockcms" pc> <a href="javascript:;"><i class="seraph icon-lock"></i><cite>锁屏</cite></a> </li>
                 <li class="layui-nav-item" id="userInfo"> <a href="javascript:;"><img src="/static/admin/images/face.jpg" class="layui-nav-img userAvatar" width="35" height="35"><cite class="adminName">管理员</cite></a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;" data-url="page/user/userInfo.html"><i class="seraph icon-ziliao" data-icon="icon-ziliao"></i><cite>个人资料</cite></a></dd>
-                        <dd><a href="javascript:;" data-url="page/user/changePwd.html"><i class="seraph icon-xiugai" data-icon="icon-xiugai"></i><cite>修改密码</cite></a></dd>
+                        <dd><a href="javascript:;" data-url="<?php echo url('admin/detail'); ?>"><i class="seraph icon-ziliao" data-icon="icon-ziliao"></i><cite>个人资料</cite></a></dd>
+                        <dd><a href="javascript:;" data-url="<?php echo url('admin/pass'); ?>"><i class="seraph icon-xiugai" data-icon="icon-xiugai"></i><cite>修改密码</cite></a></dd>
                         <dd><a href="<?php echo url('login/logout'); ?>" class="signOut"><i class="seraph icon-tuichu"></i><cite>退出登陆</cite></a></dd>
                     </dl>
                 </li>
@@ -147,9 +147,9 @@
                 </a></dt>
                 <dd class="sub-menu">
                     <ul>
-                        <li><a href="javascript:void(0);" data-url="page/shop/ad/order.html">权限管理</a></li>
-                        <li><a href="javascript:void(0);" data-url="page/shop/ad/order.html">用户组管理</a></li>
-                        <li><a href="javascript:void(0);" data-url="page/shop/ad/order.html">管理员列表</a></li>
+                        <li><a href="javascript:void(0);" data-url="<?php echo url('rule/index'); ?>">权限管理</a></li>
+                        <li><a href="javascript:void(0);" data-url="<?php echo url('group/index'); ?>">用户组管理</a></li>
+                        <li><a href="javascript:void(0);" data-url="<?php echo url('admin/index'); ?>">管理员列表</a></li>
                     </ul>
                 </dd>
             </dl>

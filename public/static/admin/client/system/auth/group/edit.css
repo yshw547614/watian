@@ -1,0 +1,5 @@
+body{ padding: 20px 20px 0 0;}
+.layui-form-label{ width: 40px;}
+.layui-input-block{ margin-left: 70px;}
+.layui-form-checkbox[lay-skin=primary] span{padding: 0;}
+#xtree{ border: 1px solid #e6e6e6; padding-bottom: 20px;}

@@ -55,8 +55,6 @@ class Auth {
                 $list[] = $auth;
             }
         }
-        print_r($list);
-        die;
         if ($relation == 'or' and ! empty($list)) {
             return true;
         }

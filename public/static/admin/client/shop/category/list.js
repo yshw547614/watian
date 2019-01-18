@@ -122,7 +122,7 @@ layui.use(['form','layer','table','jquery'],function(){
                 $('html').css('overflow','auto');
                 //location.reload();
             }
-        })
+        });
         layer.full(index);
         $(window).on("resize",function(){
             layer.full(index);

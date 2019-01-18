@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpWeb\watian\webserver\public/../application/admin\view\login\login.html";i:1544601868;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"E:\phpWeb\watian\webserver\public/../application/admin\view\login\login.html";i:1544602404;}*/ ?>
 <!DOCTYPE html>
 <html class="loginHtml">
 <head>
@@ -31,7 +31,7 @@
         <img src="<?php echo url('verify'); ?>"  onclick="this.src='<?php echo url('verify'); ?>?'+Math.random();">
     </div>
     <div class="layui-form-item">
-        <button type="button" class="layui-btn layui-block" lay-filter="login" lay-submit>登录</button>
+        <button type="button" type="button" class="layui-btn layui-block" lay-filter="login" lay-submit>登录</button>
     </div>
 </form>
 <script type="text/javascript" src="/static/admin/layui/layui.js"></script>
