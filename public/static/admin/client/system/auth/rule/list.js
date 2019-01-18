@@ -95,23 +95,19 @@ layui.use(['table','element','form','layer'],function () {
         var html = '';
         for(var i=0;i<data.length;i++){
 
-            if(data[i]['level'] == 1){
-                html += '<div class="ui-table-body-item" data-id="'+data[i]['dataid']+'">';
-            }else{
-                html += '<div class="ui-table-body-item" data-id="'+data[i]['dataid']+'" style="display: none">';
-            }
+            html += '<div class="ui-table-body-item" data-id="'+data[i]['dataid']+'">';
 
             html += '<div class="ui-table-list width-auto">';
 
             if(data[i]['level'] == 1){
 
                 html += '<div class="page-classify page-classify-pl0">';
-                html += '<div class="page-classify-icon page-classify-icon-fold">-</div>';
+                html += '<div class="page-classify-icon page-classify-icon-open">-</div>';
 
             }else if(data[i]['level'] == 2){
 
                 html += '<div class="deep-line page-classify page-classify-pl1">';
-                html += '<div class="page-classify-icon page-classify-icon-fold">-</div>';
+                html += '<div class="page-classify-icon page-classify-icon-open">-</div>';
 
             }else{
 

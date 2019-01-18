@@ -17,7 +17,7 @@ class CheckAuth
 
     public function run(&$params){
         $this->checkLogin();
-        //$this->checkAuth();
+        $this->checkAuth();
     }
     public function checkLogin(){
         $controller = strtolower(request()->controller());

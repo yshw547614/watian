@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"E:\phpWeb\watian\webserver\public/../application/admin\view\rule\index.html";i:1547622912;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"E:\phpWeb\watian\webserver\public/../application/admin\view\rule\index.html";i:1547805481;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +21,7 @@
     <blockquote class="layui-elem-quote quoteBox white">
         <div class="layui-btn-container">
             <button type="button" class="layui-btn layui-btn-normal add_btn">添加权限</button>
-            <button type="button" class="layui-btn layui-btn-warm all-open-fold" data-title="open">全部展开</button>
+            <button type="button" class="layui-btn layui-btn-warm all-open-fold" data-title="fold">全部折叠</button>
         </div>
     </blockquote>
     <div class="page-goods-classify-table">
